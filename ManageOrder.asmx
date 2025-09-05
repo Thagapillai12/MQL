@@ -1,0 +1,1 @@
+﻿<%@ WebService Language="C#" CodeBehind="ManageOrder.asmx.cs" Class="BT.SaaS.MSEOAdapter.ManageOrder" %>

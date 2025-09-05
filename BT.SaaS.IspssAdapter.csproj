@@ -1,0 +1,456 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FFED80CC-EEC4-4A22-8C06-B2AF49A8E003}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BT.SaaS.IspssAdapter</RootNamespace>
+    <AssemblyName>IspssAdapter</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <KeyContainerName>saas.key</KeyContainerName>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <UseIISExpress>true</UseIISExpress>
+    <TargetFrameworkProfile />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Blowfish, Version=1.0.2.0, Culture=neutral, PublicKeyToken=d31e9762332a355a">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\SaasCoreTrunk\saas-core-libraries\Referenced Assemblies\Blowfish.dll</HintPath>
+    </Reference>
+    <Reference Include="BT.SaaS.Core.EnvironmentManagement.Enviroments, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c127e3ee618da668, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\SaasCoreTrunk\saas-core-libraries\Referenced Assemblies\BT.SaaS.Core.EnvironmentManagement.Enviroments.dll</HintPath>
+    </Reference>
+    <Reference Include="BT.SaaS.Core.EnvironmentManagement.Enviroments.Installers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c127e3ee618da668, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\SaasCoreTrunk\saas-core-libraries\Referenced Assemblies\BT.SaaS.Core.EnvironmentManagement.Enviroments.Installers.dll</HintPath>
+    </Reference>
+    <Reference Include="BT.SaaS.Core.EnvironmentManagement.Winforms.ControlLibrary, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c127e3ee618da668, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\SaasCoreTrunk\saas-core-libraries\Referenced Assemblies\BT.SaaS.Core.EnvironmentManagement.Winforms.ControlLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="BT.SaaS.Core.MDMAPI.CustomerService, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c127e3ee618da668, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\SaasCoreTrunk\saas-core-libraries\Referenced Assemblies\BT.SaaS.Core.MDMAPI.CustomerService.dll</HintPath>
+    </Reference>
+    <Reference Include="BT.SaaS.Core.MDMAPI.Entities, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c127e3ee618da668, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\SaasCoreTrunk\saas-core-libraries\Referenced Assemblies\BT.SaaS.Core.MDMAPI.Entities.dll</HintPath>
+    </Reference>
+    <Reference Include="BT.SaaS.Core.MDMAPI.ProductMappingService, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c127e3ee618da668, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\SaasCoreTrunk\saas-core-libraries\Referenced Assemblies\BT.SaaS.Core.MDMAPI.ProductMappingService.dll</HintPath>
+    </Reference>
+    <Reference Include="BT.SaaS.Core.MDMAPI.ProductService, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c127e3ee618da668, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\SaasCoreTrunk\saas-core-libraries\Referenced Assemblies\BT.SaaS.Core.MDMAPI.ProductService.dll</HintPath>
+    </Reference>
+    <Reference Include="BT.SaaS.Core.Shared.Attributes, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c127e3ee618da668, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\SaasCoreTrunk\saas-core-libraries\Referenced Assemblies\BT.SaaS.Core.Shared.Attributes.dll</HintPath>
+    </Reference>
+    <Reference Include="BT.SaaS.Core.Shared.Entities, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c127e3ee618da668, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\SaasCoreTrunk\saas-core-libraries\Referenced Assemblies\BT.SaaS.Core.Shared.Entities.dll</HintPath>
+    </Reference>
+    <Reference Include="BT.SaaS.Core.Shared.ErrorManagement, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c127e3ee618da668, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\SaasCoreTrunk\saas-core-libraries\Referenced Assemblies\BT.SaaS.Core.Shared.ErrorManagement.dll</HintPath>
+    </Reference>
+    <Reference Include="BT.SaaS.Core.Shared.ErrorManagement.EventServiceListener, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\SaasCoreTrunk\saas-core-libraries\Referenced Assemblies\BT.SaaS.Core.Shared.ErrorManagement.EventServiceListener.dll</HintPath>
+    </Reference>
+    <Reference Include="BT.SaaS.Core.Shared.Exceptions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c127e3ee618da668, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\SaasCoreTrunk\saas-core-libraries\Referenced Assemblies\BT.SaaS.Core.Shared.Exceptions.dll</HintPath>
+    </Reference>
+    <Reference Include="BT.SaaS.Core.Shared.Utils, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c127e3ee618da668, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\SaasCoreTrunk\saas-core-libraries\Referenced Assemblies\BT.SaaS.Core.Shared.Utils.dll</HintPath>
+    </Reference>
+    <Reference Include="BT.SaaS.Core.Shared.Versioning, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c127e3ee618da668, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\SaasCoreTrunk\saas-core-libraries\Referenced Assemblies\BT.SaaS.Core.Shared.Versioning.dll</HintPath>
+    </Reference>
+    <Reference Include="BT.SaaS.Core.Shared.Winforms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c127e3ee618da668, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\SaasCoreTrunk\saas-core-libraries\Referenced Assemblies\BT.SaaS.Core.Shared.Winforms.dll</HintPath>
+    </Reference>
+    <Reference Include="BT.SaaS.Core.Shared.Workflow.Graph, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c127e3ee618da668, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\SaasCoreTrunk\saas-core-libraries\Referenced Assemblies\BT.SaaS.Core.Shared.Workflow.Graph.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Caching, Version=4.0.0.0, Culture=neutral, PublicKeyToken=c127e3ee618da668, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\SaasCoreTrunk\saas-core-libraries\Referenced Assemblies\Microsoft.Practices.EnterpriseLibrary.Caching.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=4.0.0.0, Culture=neutral, PublicKeyToken=c127e3ee618da668, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\SaasCoreTrunk\saas-core-libraries\Referenced Assemblies\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Configuration.Design">
+      <HintPath>..\..\..\..\..\..\SaasCoreTrunk\saas-core-libraries\Referenced Assemblies\Microsoft.Practices.EnterpriseLibrary.Configuration.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=c127e3ee618da668, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\SaasCoreTrunk\saas-core-libraries\Referenced Assemblies\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=c127e3ee618da668, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\SaasCoreTrunk\saas-core-libraries\Referenced Assemblies\Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging, Version=4.0.0.0, Culture=neutral, PublicKeyToken=c127e3ee618da668, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\SaasCoreTrunk\saas-core-libraries\Referenced Assemblies\Microsoft.Practices.EnterpriseLibrary.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="PlaceOrderService.asmx">
+    </Content>
+    <None Include="Properties\DataSources\BT.SaaS.Core.MDMAPI.Entities.Customer.ProductDefinationInstance.datasource" />
+    <None Include="Properties\DataSources\BT.SaaS.Core.MDMAPI.Entities.Customer.ProductInstanceDependency.datasource" />
+    <Content Include="Properties\DataSources\BT.SaaS.Core.MDMAPI.Entities.Customer.ServiceProviderType1.datasource" />
+    <None Include="Properties\DataSources\BT.SaaS.Core.MDMAPI.Entities.Product.KCI1.datasource" />
+    <None Include="Properties\DataSources\BT.SaaS.Core.MDMAPI.Entities.Product.ProductCatalog1.datasource" />
+    <None Include="Properties\DataSources\BT.SaaS.Core.MDMAPI.Entities.Product.ProductDefinition1.datasource" />
+    <None Include="Properties\DataSources\BT.SaaS.Core.MDMAPI.Entities.Product.ProductDefinitionBillingType1.datasource" />
+    <None Include="Properties\DataSources\BT.SaaS.Core.MDMAPI.Entities.Product.ProductDefinitionFeatures1.datasource" />
+    <None Include="Properties\DataSources\BT.SaaS.Core.MDMAPI.Entities.Product.ProductPromotionclass1.datasource" />
+    <None Include="Properties\DataSources\BT.SaaS.Core.MDMAPI.Entities.Product.ProductVasClass1.datasource" />
+    <None Include="Properties\DataSources\BT.SaaS.Core.MDMAPI.Entities.Product.RoleActionOSSMapping1.datasource" />
+    <Content Include="Properties\DataSources\BT.SaaS.Core.Shared.Entities.OrderResponse1.datasource" />
+    <None Include="Properties\DataSources\BT.SaaS.Core.Shared.Entities.QueryOrdersResponse.datasource" />
+    <None Include="Service References\MDMAPI.CustomerService\CustomerService1.wsdl" />
+    <None Include="Service References\MDMAPI.CustomerService\CustomerService9.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MDMAPI.CustomerService\CustomerService91.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MDMAPI.CustomerService\CustomerService92.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MDMAPI.CustomerService\CustomerService93.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MDMAPI.CustomerService\CustomerService94.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MDMAPI.CustomerService\CustomerService95.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MDMAPI.CustomerService\CustomerService96.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MDMAPI.CustomerService\CustomerService97.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MDMAPI.CustomerService\CustomerService98.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MDMAPI.ProductService\ProductService.wsdl" />
+    <None Include="Service References\MDMAPI.ProductService\ProductService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MDMAPI.ProductService\ProductService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MDMAPI.ProductService\ProductService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MDMAPI.ProductService\ProductService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MDMAPI.ProductService\ProductService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MDMAPI.ProductService\ProductService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MDMAPI.ProductService\ProductService6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PE\configuration.svcinfo" />
+    <None Include="Service References\PE\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\MDMAPI.CustomerService\CustomerService1.disco" />
+    <None Include="Service References\PE\configuration911.svcinfo" />
+    <None Include="Service References\SUGARCRM.ISVQueryService\configuration91.svcinfo" />
+    <None Include="Service References\SUGARCRM.ISVQueryService\SugarCRMQueryServiceProvider.disco" />
+    <None Include="Service References\MDMAPI.ProductService\ProductService.disco" />
+    <Content Include="Web.config" />
+    <None Include="Service References\SUGARCRM.ISVQueryService\SugarCRMQueryServiceProvider.wsdl" />
+    <None Include="Service References\SUGARCRM.ISVQueryService\SugarCRMQueryServiceProvider.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SUGARCRM.ISVQueryService\SugarCRMQueryServiceProvider1.wsdl" />
+    <None Include="Service References\SUGARCRM.ISVQueryService\SugarCRMQueryServiceProvider1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SUGARCRM.ISVQueryService\SugarCRMQueryServiceProvider2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AttributeMappingTypeEnum.cs" />
+    <Compile Include="AttributeMappingPostProcessingEnum.cs" />
+    <Compile Include="CRMAdapterWrapper.cs" />
+    <Compile Include="CRMProxy.cs" />
+    <Compile Include="EventServiceProxy.cs" />
+    <Compile Include="Exceptions\CacheException.cs" />
+    <Compile Include="ConfigurationBosAttributeMap.cs" />
+    <Compile Include="ConfigurationBosAttributeMapCollection.cs" />
+    <Compile Include="AttributeMappingSourceEnum.cs" />
+    <Compile Include="BlowfishEncryptor.cs" />
+    <Compile Include="BOSOrderGenerated.cs" />
+    <Compile Include="BOSOrder.cs" />
+    <Compile Include="BOSOrderResponseGenerated.cs" />
+    <Compile Include="ConfigurationBosAttributeMapSection.cs" />
+    <Compile Include="ConfigurationBosProductAttributeMap.cs" />
+    <Compile Include="ConfigurationBosProductAttributeMapCollection.cs" />
+    <Compile Include="DnpWrapper.cs" />
+    <Compile Include="Exceptions\CRMException.cs" />
+    <Compile Include="Exceptions\DnpException.cs" />
+    <Compile Include="GetVasUsage.cs" />
+    <Compile Include="Exceptions\GetVasUsageException.cs" />
+    <Compile Include="GetVasUsageGenerated.cs" />
+    <Compile Include="Logger.cs" />
+    <Compile Include="IspssAdapterInstaller.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DnpProxy.cs" />
+    <Compile Include="Exceptions\MappingException.cs" />
+    <Compile Include="Exceptions\MDMException.cs" />
+    <Compile Include="MDMWrapper.cs" />
+    <Compile Include="OrderItemProductMap.cs" />
+    <Compile Include="ObjectSerializer.cs" />
+    <Compile Include="Mapper.cs" />
+    <Compile Include="Exceptions\PEException.cs" />
+    <Compile Include="InboundQueueDAL.cs" />
+    <Compile Include="PlaceOrderService.asmx.cs">
+      <DependentUpon>PlaceOrderService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\MDMAPI.CustomerService\Reference.cs">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Service References\MDMAPI.ProductService\Reference.cs">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Service References\PE\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SUGARCRM.ISVQueryService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Exceptions\SugarException.cs" />
+    <Compile Include="SugarWrapper.cs" />
+    <Compile Include="VASAdapterDBDAL.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\DataSources\BT.SaaS.Core.MDMAPI.Entities.Product.ProductPromotionclass.datasource" />
+    <None Include="Properties\DataSources\BT.SaaS.Core.MDMAPI.Entities.Product.ProductVasClass.datasource" />
+    <None Include="Service References\MDMAPI.CustomerService\configuration91.svcinfo" />
+    <None Include="Service References\MDMAPI.CustomerService\configuration.svcinfo" />
+    <None Include="Service References\MDMAPI.CustomerService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\MDMAPI.ProductService\configuration91.svcinfo" />
+    <None Include="Service References\MDMAPI.ProductService\configuration.svcinfo" />
+    <Content Include="web.template.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Properties\DataSources\BT.SaaS.MDMAPI.Entities.Customer.ProductInstanceEx.datasource" />
+    <None Include="Properties\DataSources\BT.SaaS.MDMAPI.Entities.Customer.ProductServiceInstanceEx.datasource" />
+    <None Include="Properties\DataSources\BT.SaaS.MDMAPI.Entities.ProductMapping.ProductServiceActionMapping1.datasource" />
+    <None Include="Properties\DataSources\BT.SaaS.MDMAPI.Entities.ProductMapping.ProductServiceMapping1.datasource" />
+    <None Include="Service References\MDMAPI.ProductService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\PE\service.wsdl" />
+    <None Include="Service References\PE\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PE\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PE\v3.wsdl" />
+    <None Include="Service References\PE\v3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PE\v5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SUGARCRM.ISVQueryService\configuration.svcinfo" />
+    <None Include="Service References\SUGARCRM.ISVQueryService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Properties\DataSources\BT.SaaS.MDMAPI.Entities.Customer.Alert.datasource" />
+    <None Include="Properties\DataSources\BT.SaaS.MDMAPI.Entities.Customer.Contact.datasource" />
+    <None Include="Properties\DataSources\BT.SaaS.MDMAPI.Entities.Customer.Customer.datasource" />
+    <None Include="Properties\DataSources\BT.SaaS.MDMAPI.Entities.Customer.CustomerAttribute.datasource" />
+    <None Include="Properties\DataSources\BT.SaaS.MDMAPI.Entities.Customer.Email.datasource" />
+    <None Include="Properties\DataSources\BT.SaaS.MDMAPI.Entities.Customer.Incident.datasource" />
+    <None Include="Properties\DataSources\BT.SaaS.MDMAPI.Entities.Customer.Phone.datasource" />
+    <None Include="Properties\DataSources\BT.SaaS.MDMAPI.Entities.Customer.PostalAddress.datasource" />
+    <None Include="Properties\DataSources\BT.SaaS.MDMAPI.Entities.Customer.ProductInstance.datasource" />
+    <None Include="Properties\DataSources\BT.SaaS.MDMAPI.Entities.Customer.ProductServiceInstance.datasource" />
+    <None Include="Properties\DataSources\BT.SaaS.MDMAPI.Entities.Customer.ResellerStyle.datasource" />
+    <None Include="Properties\DataSources\BT.SaaS.MDMAPI.Entities.Customer.ServiceProviderAttribute.datasource" />
+    <None Include="Properties\DataSources\BT.SaaS.MDMAPI.Entities.Customer.ServiceProviderInfo.datasource" />
+    <None Include="Properties\DataSources\BT.SaaS.MDMAPI.Entities.Customer.ServiceProviderRelation.datasource" />
+    <None Include="Properties\DataSources\BT.SaaS.MDMAPI.Entities.Customer.ServiceProviderType.datasource" />
+    <None Include="Properties\DataSources\BT.SaaS.Shared.Entities.OrderResponse.datasource" />
+    <None Include="Properties\DataSources\BT.SaaS.MDMAPI.Entities.Product.KCI.datasource" />
+    <None Include="Properties\DataSources\BT.SaaS.MDMAPI.Entities.Product.ProductCatalog.datasource" />
+    <None Include="Properties\DataSources\BT.SaaS.MDMAPI.Entities.Product.ProductDefinition.datasource" />
+    <None Include="Properties\DataSources\BT.SaaS.MDMAPI.Entities.Product.ProductDefinitionBillingType.datasource" />
+    <None Include="Properties\DataSources\BT.SaaS.MDMAPI.Entities.Product.ProductDefinitionFeatures.datasource" />
+    <None Include="Properties\DataSources\BT.SaaS.MDMAPI.Entities.Product.RoleActionOSSMapping.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\MDMAPI.CustomerService\" />
+    <WCFMetadataStorage Include="Service References\MDMAPI.ProductService\" />
+    <WCFMetadataStorage Include="Service References\PE\" />
+    <WCFMetadataStorage Include="Service References\SUGARCRM.ISVQueryService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="IspssAdapterInstaller.resx">
+      <DependentUpon>IspssAdapterInstaller.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1369</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:1369/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

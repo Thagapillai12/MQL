@@ -1,0 +1,36 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="BT.SaaS.MSEO.MQService" GeneratedClassName="Settings1">
+  <Profiles />
+  <Settings>
+    <Setting Name="TimerIntervalInSeconds" Type="System.String" Scope="User">
+      <Value Profile="(Default)">30</Value>
+    </Setting>
+    <Setting Name="MQstring" Type="System.String" Scope="User">
+      <Value Profile="(Default)">mq:queue/?</Value>
+    </Setting>
+    <Setting Name="AcceptedStatus" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Accepted</Value>
+    </Setting>
+    <Setting Name="RejectedStatus" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Rejected</Value>
+    </Setting>
+    <Setting Name="CompleteStatus" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Complete</Value>
+    </Setting>
+    <Setting Name="FailedStatus" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Failed</Value>
+    </Setting>
+    <Setting Name="SucessCode" Type="System.String" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="FailedCode" Type="System.String" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="IgnoredStatus" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Ignored</Value>
+    </Setting>
+    <Setting Name="InvalideRequestCode" Type="System.String" Scope="User">
+      <Value Profile="(Default)">001</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

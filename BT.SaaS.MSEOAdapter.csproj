@@ -1,0 +1,324 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B9312C5E-5425-4935-8FA4-8AB88A99B0AE}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BT.SaaS.MSEOAdapter</RootNamespace>
+    <AssemblyName>BT.SaaS.MSEOAdapter</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <UseIISExpress>true</UseIISExpress>
+    <TargetFrameworkProfile />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="amqmdnet, Version=1.0.0.3, Culture=neutral, PublicKeyToken=dd3cb1c9aae9ec97">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\SaasCoreTrunk\saas-core-libraries\Referenced Assemblies\amqmdnet.dll</HintPath>
+    </Reference>
+    <Reference Include="BPTMDotNet, Version=0.0.0.0, Culture=neutral, PublicKeyToken=d05df17430e58e33, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\SaasCoreTrunk\saas-core-libraries\Referenced Assemblies\BPTMDotNet.dll</HintPath>
+    </Reference>
+    <Reference Include="BT.Core.ISVAdapter.ISVService, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b383a570d83fc54b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\SaasCoreTrunk\saas-core-libraries\Referenced Assemblies\BT.Core.ISVAdapter.ISVService.dll</HintPath>
+    </Reference>
+    <Reference Include="BT.SaaS.Core.EnvironmentManagement.Enviroments, Version=1.5.0.0, Culture=neutral, PublicKeyToken=c127e3ee618da668, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\SaasCoreTrunk\saas-core-libraries\Referenced Assemblies\BT.SaaS.Core.EnvironmentManagement.Enviroments.dll</HintPath>
+    </Reference>
+    <Reference Include="BT.SaaS.Core.EnvironmentManagement.Enviroments.Installers, Version=1.5.0.0, Culture=neutral, PublicKeyToken=c127e3ee618da668, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\SaasCoreTrunk\saas-core-libraries\Referenced Assemblies\BT.SaaS.Core.EnvironmentManagement.Enviroments.Installers.dll</HintPath>
+    </Reference>
+    <Reference Include="BT.SaaS.Core.EnvironmentManagement.Winforms.ControlLibrary, Version=1.5.0.0, Culture=neutral, PublicKeyToken=c127e3ee618da668, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\SaasCoreTrunk\saas-core-libraries\Referenced Assemblies\BT.SaaS.Core.EnvironmentManagement.Winforms.ControlLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="BT.SaaS.Core.MDMAPI.Entities, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c127e3ee618da668, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\SaasCoreTrunk\saas-core-libraries\Referenced Assemblies\BT.SaaS.Core.MDMAPI.Entities.dll</HintPath>
+    </Reference>
+    <Reference Include="BT.SaaS.Core.MDMAPI.ProductService, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c127e3ee618da668, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\SaasCoreTrunk\saas-core-libraries\Referenced Assemblies\BT.SaaS.Core.MDMAPI.ProductService.dll</HintPath>
+    </Reference>
+    <Reference Include="BT.SaaS.Core.Shared.Entities, Version=1.5.0.0, Culture=neutral, PublicKeyToken=c127e3ee618da668, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\SaasCoreTrunk\saas-core-libraries\Referenced Assemblies\BT.SaaS.Core.Shared.Entities.dll</HintPath>
+    </Reference>
+    <Reference Include="BT.SaaS.Core.Shared.ErrorManagement, Version=1.5.0.0, Culture=neutral, PublicKeyToken=c127e3ee618da668, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\SaasCoreTrunk\saas-core-libraries\Referenced Assemblies\BT.SaaS.Core.Shared.ErrorManagement.dll</HintPath>
+    </Reference>
+    <Reference Include="BT.SaaS.Core.Shared.ErrorManagement.EventServiceListener, Version=1.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\SaasCoreTrunk\saas-core-libraries\Referenced Assemblies\BT.SaaS.Core.Shared.ErrorManagement.EventServiceListener.dll</HintPath>
+    </Reference>
+    <Reference Include="BT.SaaS.Core.Shared.Exceptions, Version=1.5.0.0, Culture=neutral, PublicKeyToken=c127e3ee618da668, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\SaasCoreTrunk\saas-core-libraries\Referenced Assemblies\BT.SaaS.Core.Shared.Exceptions.dll</HintPath>
+    </Reference>
+    <Reference Include="BT.SaaS.Core.Shared.Utils, Version=1.5.0.0, Culture=neutral, PublicKeyToken=c127e3ee618da668, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\SaasCoreTrunk\saas-core-libraries\Referenced Assemblies\BT.SaaS.Core.Shared.Utils.dll</HintPath>
+    </Reference>
+    <Reference Include="BT.SaaS.Core.Shared.Versioning, Version=1.5.0.0, Culture=neutral, PublicKeyToken=c127e3ee618da668, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\SaasCoreTrunk\saas-core-libraries\Referenced Assemblies\BT.SaaS.Core.Shared.Versioning.dll</HintPath>
+    </Reference>
+    <Reference Include="BT.SaaS.Core.Shared.Winforms, Version=1.5.0.0, Culture=neutral, PublicKeyToken=c127e3ee618da668, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\SaasCoreTrunk\saas-core-libraries\Referenced Assemblies\BT.SaaS.Core.Shared.Winforms.dll</HintPath>
+    </Reference>
+    <Reference Include="BT.SaaS.Core.Shared.Workflow.Graph, Version=1.5.0.0, Culture=neutral, PublicKeyToken=c127e3ee618da668, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\SaasCoreTrunk\saas-core-libraries\Referenced Assemblies\BT.SaaS.Core.Shared.Workflow.Graph.dll</HintPath>
+    </Reference>
+    <Reference Include="ClosedXML">
+      <HintPath>..\packages\ClosedXML.0.104.2\lib\netstandard2.0\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Core, Version=7.2.4630.5, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\SaasCoreTrunk\saas-core-libraries\Referenced Assemblies\IKVM.OpenJDK.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Text, Version=7.2.4630.5, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\SaasCoreTrunk\saas-core-libraries\Referenced Assemblies\IKVM.OpenJDK.Text.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Util, Version=7.2.4630.5, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\SaasCoreTrunk\saas-core-libraries\Referenced Assemblies\IKVM.OpenJDK.Util.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.Runtime, Version=7.2.4630.5, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\SaasCoreTrunk\saas-core-libraries\Referenced Assemblies\IKVM.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=4.0.0.0, Culture=neutral, PublicKeyToken=c127e3ee618da668, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\SaasCoreTrunk\saas-core-libraries\Referenced Assemblies\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=c127e3ee618da668, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\SaasCoreTrunk\saas-core-libraries\Referenced Assemblies\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging, Version=4.0.0.0, Culture=neutral, PublicKeyToken=c127e3ee618da668, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\SaasCoreTrunk\saas-core-libraries\Referenced Assemblies\Microsoft.Practices.EnterpriseLibrary.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ManageOrder.asmx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AHTRequestProcessor.cs" />
+    <Compile Include="BPTMHelper.cs" />
+    <Compile Include="BTCONSUMERBROADBANDProcessor.cs" />
+    <Compile Include="BTPlusMarkerProcessor.cs" />
+    <Compile Include="CMPSException.cs" />
+    <Compile Include="CmpsProxy.cs" />
+    <Compile Include="CmpsWrapper.cs" />
+    <Compile Include="DanteRequestProcessor.cs" />
+    <Compile Include="DnpRestCallWrapper.cs" />
+    <Compile Include="EERequestProcessor.cs" />
+    <Compile Include="ESBRestCallWrapper.cs" />
+    <Compile Include="EventMapper.cs" />
+    <Compile Include="FSecureEntities\SubscriptionManagementService11.cs" />
+    <Compile Include="HCSRequestProcessor.cs" />
+    <Compile Include="Helpers\RESTHelper.cs" />
+    <Compile Include="Helpers\XmlHelper.cs" />
+    <Compile Include="IManageOrder.cs" />
+    <Compile Include="InterfaceRequestProcessor.cs" />
+    <Compile Include="LogHelper.cs" />
+    <Compile Include="ManageProfileRest.cs" />
+    <Compile Include="McAFeeEntities\Subscription.cs" />
+    <Compile Include="McAfeeProcessor.cs" />
+    <Compile Include="MngSrvcInstanceEntities.cs" />
+    <Compile Include="MSEOAdapterInstaller.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MSEOAdapterInstaller.Designer.cs">
+      <DependentUpon>MSEOAdapterInstaller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MSEOInboundQueueDAL.cs" />
+    <Compile Include="MSEOInterface.cs" />
+    <Compile Include="MSEOOrderNotification.cs" />
+    <Compile Include="MSEOSaaSMapper.cs" />
+    <Compile Include="ManageOrder.asmx.cs">
+      <DependentUpon>ManageOrder.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NominumProductProcessor.cs" />
+    <Compile Include="OrdersDAL.cs" />
+    <Compile Include="PremiumEmail.cs" />
+    <Compile Include="ProductFactory.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QueryCloudEntities.cs" />
+    <Compile Include="QueryMcAfeeEntities.cs" />
+    <Compile Include="RequestProcessor.cs" />
+    <Compile Include="RequestValidator.cs" />
+    <Compile Include="SaaSMapper.cs" />
+    <Compile Include="schemas\BTCOM\ManageEbillingService.cs" />
+    <Compile Include="schemas\ESBManageCustomer.cs" />
+    <Compile Include="schemas\ESBManageCustomerBillingSync.cs" />
+    <Compile Include="schemas\ESBMCCPSchema.cs" />
+    <Compile Include="schemas\ESBResponse.cs" />
+    <Compile Include="schemas\ESB\GetContactDetailsV9.cs" />
+    <Compile Include="schemas\ESB\GetIdentityDetailsV6.cs" />
+    <Compile Include="schemas\ESB\ManageCustomerBillingSync.cs" />
+    <Compile Include="schemas\ESB\ManageCustomerContactPerson.cs" />
+    <Compile Include="schemas\GetServiceRoleRequests.cs" />
+    <Compile Include="schemas\ManageCustomerOrder.cs" />
+    <Compile Include="schemas\ManageProfileRWSV1.cs" />
+    <Compile Include="schemas\ManageServiceRoleRequest.cs" />
+    <Compile Include="Settings1.Designer.cs">
+      <DependentUpon>Settings1.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="SpringDnpWrapper.cs" />
+    <Compile Include="SpringRequestProcessor.cs" />
+    <Compile Include="ThomasRequestProcessor.cs" />
+    <Compile Include="VASRequestProcessor.cs" />
+    <Compile Include="VASRequestValidator.cs" />
+    <Compile Include="VASServiceEligibilityRequest.cs" />
+    <Compile Include="VASServiceEligibilityResponse.cs" />
+    <Compile Include="VoiceInfinityRequestProcessor.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.template.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="packages.config" />
+    <None Include="schemas\MSEO.wsdl" />
+    <None Include="Settings1.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings1.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BT.SaaS.HttpModuleLogging\BT.SaaS.HttpModuleLogging.csproj">
+      <Project>{65007BB4-AEB6-4EE6-9A10-995B5256D584}</Project>
+      <Name>BT.SaaS.HttpModuleLogging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BT.SaaS.IspssAdapter\BT.SaaS.IspssAdapter.csproj">
+      <Project>{FFED80CC-EEC4-4A22-8C06-B2AF49A8E003}</Project>
+      <Name>BT.SaaS.IspssAdapter</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MSEOAdapterInstaller.resx">
+      <DependentUpon>MSEOAdapterInstaller.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>5447</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:5447/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
